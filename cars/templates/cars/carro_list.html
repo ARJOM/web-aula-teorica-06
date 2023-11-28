@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="{% url 'create-carro' %}"> Novo Carro </a>
+    <h2>Carros</h2>
+    <ul>
+    {% for item in object_list %}
+        <li>{{ item.nome }} - <a href="{% url 'update-carro' item.id %}">Editar</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

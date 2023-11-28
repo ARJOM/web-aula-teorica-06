@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'list-marca' %}">Marcas</a>
+    </nav>
+    <main>
+        <h1>Car Admin</h1>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

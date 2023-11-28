@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="{% url 'create-marca' %}"> Nova Marca </a>
+    <h2>Marcas</h2>
+    <ul>
+    {% for item in object_list %}
+        <li>{{ item.nome }} - <a href="{% url 'update-marca' item.id %}">Editar</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
